@@ -46,7 +46,7 @@ header > button:hover {
 main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr 10fr;
     gap: 1rem;
     height: 80vh;
 
@@ -58,8 +58,39 @@ main {
         padding: 1rem;
         border-radius: 10px;
         cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
+}
+.card > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.card > div > p{
+    background-color: var(--color-dark-gray);
+    padding: 0.4rem;
+    border-radius: 10px;
+    flex: 2;
+}
+
+
+.card > div > button {
+    height: 30px;
+    flex: 1;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(242, 63, 63);
+    color: var(--color-gray);
+    cursor: pointer;
+}
+
+.card > div > button:hover {
+    background-color: rgb(194, 50, 50);
 }
 
 .row {
@@ -70,7 +101,7 @@ main {
     border-radius: 10px;
 }
 
-main> h5 {
+main > h5 {
     padding: 1rem;
     margin-bottom: 1rem;
     background-color: var(--color-dark-gray);
