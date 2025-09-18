@@ -3,11 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <title>Jira</title>
 </head>
 <body>
-    
-    <script src="script.js"></script>
+    <header>
+        <h1>Board</h1>
+        <button onclick="openModal()">Agregar tarea</button>
+    </header>
+    <main>
+        <h5>TO DO</h5>
+        <h5>IN PROGRESS</h5>
+        <h5>IN REVIEW</h5>
+        <h5>DONE</h5>
+
+        <!-- Agrega los IDs aquí -->
+        <div class="row tareas" id="to-do"></div>
+        <div class="row tareas_progreso" id="in-progress"></div>
+        <div class="row tareas_revision" id="in-review"></div>
+        <div class="row tareas_terminada" id="done"></div>
+    </main>
+
+    <dialog>
+        <h1>Nueva tarea a registrar.</h1>
+        <label for="area">Área: <input type="text" id="area"></label>
+        <label for="descripcion">Descripción: <input type="text" id="descripcion"></label>
+        <button onclick="guardarTarea()">Registrar tarea</button>
+    </dialog>
+
+    <script src="./script.js"></script>
 </body>
 </html>
